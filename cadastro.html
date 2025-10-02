@@ -1,12 +1,104 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    
+    <title>Gold Store - Cadastro</title>
+    <link rel="stylesheet" href="css/cadastro.css">
 </head>
 <body>
-    
+
+    <!-- LOGO SUPERIOR ESQUERDA -->
+    <div class="top-logo">
+        <img src="imagem/goldstore.jpeg"Gold Store Logo class="logo-gold">
+    </div>
+
+    <!-- FORMULÁRIO -->
+    <div class="form-container">
+        <form id="cadastroForm">
+            <label for="nome">NOME:</label>
+            <input type="text" id="nome" required>
+
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" required>
+
+            <label for="telefone">TELEFONE:</label>
+            <input type="tel" id="telefone" required>
+
+            <label for="email">E-MAIL:</label>
+            <input type="email" id="email" required>
+
+            <label for="senha">SENHA:</label>
+            <input type="password" id="senha" required>
+
+            <button type="submit">CADASTRAR</button>
+        </form>
+    </div>
+
+
+    <!-- SCRIPT PARA FUNCIONAR O BOTÃO -->
+    <script>
+        document.getElementById("cadastroForm").addEventListener("submit", function(event){
+            event.preventDefault();
+
+            const nome = document.getElementById("nome").value;
+            const cpf = document.getElementById("cpf").value;
+            const telefone = document.getElementById("telefone").value;
+            const email = document.getElementById("email").value;
+            const senha = document.getElementById("senha").value;
+
+            if(nome && cpf && telefone && email && senha){
+                alert("Cadastro realizado com sucesso!\n\n" +
+                      "Nome: " + nome + "\n" +
+                      "CPF: " + cpf + "\n" +
+                      "Telefone: " + telefone + "\n" +
+                      "E-mail: " + email);
+
+                console.log("Novo cadastro:");
+                console.log("Nome:", nome);
+                console.log("CPF:", cpf);
+                console.log("Telefone:", telefone);
+                console.log("E-mail:", email);
+                console.log("Senha:", senha);
+            } else {
+                alert("Por favor, preencha todos os campos.");
+            }
+        });
+    </script>
+
+     <!-- RODAPÉ -->
+    <footer>
+        <div class="footer-content">
+            <div class="techcore">
+                <p>SITE DESENVOLVIDO POR:</p>
+                <img src="imagem/techcore.jpeg" alt="TechCore">
+            </div>
+
+            <div class="formas-pagamento">
+                <p>Formas de pagamento</p>
+                <div class="cards">
+                    <img src="imagem/visapreto.png" alt="Visa">
+                    <img src="imagem/mastercard.png" alt="Mastercard">
+                    <img src="imagem/american.png" alt="American Express">
+                    <img src="imagem/elo.png" alt="Elo">
+                    <img src="imagem/hiper.jpg" alt="Hipercard">
+                    <img src="imagem/discover.png" alt="Discover">
+                    <img src="imagem/pix.jpg" alt="Pix">
+                </div>
+            </div>
+
+            <div class="social-goldstore">
+                <p>@goldstore_gf</p>
+                <img src="imagem/goldstore.jpeg" alt="Gold Store">
+            </div>
+        </div>
+            <div>
+            <p class="copyright">
+                © 2025 Gold Store. Todos os direitos reservados. Fisia Comércio de Produtos de Moda Ltda - CNPJ: 27550329/4811-91 Rodovia Fernão Dias, S/N Km 947.5 - Galpão Modulo 3640 - CEP 12.023-483 - Extrema - SP
+            </p>
+            </div>
+        
+    </footer>
+
 </body>
 </html>

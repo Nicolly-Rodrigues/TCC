@@ -1,0 +1,101 @@
+/* Fundo geral */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #000, #333);
+    color: white;
+    text-align: center;
+}
+
+/* Logo superior esquerda */
+.top-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.logo-gold {
+    width: 200px;
+}
+
+/* Formulário */
+.form-container {
+    margin: 100px auto 30px; /* espaço extra por causa da logo */
+    padding: 20px;
+    max-width: 400px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid gold;
+    border-radius: 5px;
+    background: #eee;
+    color: #000;
+}
+
+button {
+    background: black;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: gold;
+    color: black;
+}
+
+/* Rodapé */
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-content .techcore img {
+    margin-right: auto;
+    height: 80px;
+    width: auto;
+}
+.footer-content .social-goldstore img,
+.footer-content .cards img {
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.social-goldstore {
+    display: flex;
+    align-items: center;
+    gap: 100x;
+}
+
+p {
+    color: #fff;
+}
+.copyright{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+}
