@@ -1,5 +1,36 @@
 from rest_framework import serializers
 from .models import Categoria, Produto, ProdutoVariacao
+from django.contrib.auth.password_validation import validate_password
+from .models import Usuario, Endereco
+
+from rest_framework import serializers
+
+
+class UsuarioSerializer(serializers.ModelSerializer):
+    # Campo virtual para nome completo
+    nome = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Usuario
+        # Campos existentes no modelo + campo virtual 'nome'
+        fields = ['username', 'password', 'cpf', 'telefone', 'first_name', 'last_name', 'nome']
+        extra_kwargs = {
+            'password': {'write_only': True},  # senha não é retornada
+            'first_name': {'required': True},
+            'last_name': {'required': True}
+        }
+
+    # Método que retorna o nome completo
+    def get_nome(self, obj):
+        return f"{obj.first_name} {obj.last_name}"
+
+    # Sobrescreve o create para salvar senha com hash
+    def create(self, validated_data):
+        password = validated_data.pop('password')
+        usuario = Usuario(**validated_data)
+        usuario.set_password(password)
+        usuario.save()
+        return usuario
 
 # Categoria
 class CategoriaSerializer(serializers.ModelSerializer):

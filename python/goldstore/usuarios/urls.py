@@ -2,10 +2,15 @@ from django.urls import path
 from .views import (
     CategoriaList, CategoriaDetail,
     ProdutoList, ProdutoDetail,
-    ProdutoVariacaoList, ProdutoVariacaoDetail
+    ProdutoVariacaoList, ProdutoVariacaoDetail,
+    CadastroUsuarioAPIView , LoginAPIView # <-- adicione aqui também
 )
 
 urlpatterns = [
+    # Cadastro de usuário
+    path('cadastro/', CadastroUsuarioAPIView.as_view(), name='cadastro-usuario'),
+     path('login/', LoginAPIView.as_view(), name='login-usuario'),
+
     # Categorias
     path('categorias/', CategoriaList.as_view(), name='categoria-list'),
     path('categorias/<int:pk>/', CategoriaDetail.as_view(), name='categoria-detail'),
