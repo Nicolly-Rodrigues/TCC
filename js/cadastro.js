@@ -39,8 +39,11 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if (resposta.ok) {
+                  // Redireciona para a página inicial
+        window.location.assign("/inicio.html");
         alert("Usuário cadastrado com sucesso!");
         form.reset();
+
       } else {
         const erro = await resposta.json();
         alert("Erro ao cadastrar: " + JSON.stringify(erro));
