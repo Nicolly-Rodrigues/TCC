@@ -1,0 +1,86 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #000; /* Preto */
+  padding: 10px 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.logo span {
+  color: gold;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.menu li {
+  position: relative;
+  cursor: pointer;
+  padding: 5px 0;
+  color: white;
+  font-weight: 500;
+}
+
+.menu li.produtos {
+  color: gold; /* Produto em dourado */
+}
+
+.menu li.produtos:hover,
+.menu li.produtos.active {
+  color: gold;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 120%; /* Um pouco afastado do menu */
+  left: 0;
+  background: white;
+  border: 4px solid #d4af37; /* Dourado mais escuro */
+  border-radius: 0;
+  min-width: 140px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.menu li.produtos:hover .dropdown,
+.menu li.produtos.active .dropdown {
+  display: block;
+}
+
+.dropdown a {
+  display: block;
+  padding: 12px 20px;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+
+.dropdown a:last-child {
+  border-bottom: none; /* Remove linha do último item */
+}
+
+.dropdown a:hover {
+  background: #d4af37; /* Dourado ao passar o mouse */
+  color: white;
+}
+
+.icons svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+  margin-left: 15px;
+  cursor: pointer;
+}
