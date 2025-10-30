@@ -17,29 +17,30 @@
   <!-- Cabeçalho -->
   <header class="header">
     <div class="brand">
+       <a href="inicio.html">
       <img src="imagem/goldstore logo.png" alt="Gold Store" class="logo-top-left">
+      </a>
       <div class="gold-underline"></div>
     </div>
 
-<nav>
-  <ul class="nav-links">
-    <li><a href="sobrenos.html">SOBRE NÓS</a></li>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="sobrenos.html">SOBRE NÓS</a></li>
 
-    <li class="dropdown">
-      <a href="produtos.html">PRODUTOS</a>
-      <ul class="dropdown-menu">
-        <li><a href="bone.html">BONÉ</a></li>
-        <li><a href="calca.html">CALÇA</a></li>
-        <li><a href="camisetas.html">CAMISETAS</a></li>
-        <li><a href="tenis.html">TÊNIS</a></li>
-        <li><a href="conjuntos.html">CONJUNTOS</a></li>
+        <li class="dropdown">
+          <a href="produtos.html">PRODUTOS</a>
+          <ul class="dropdown-menu">
+            <li><a href="bone.html">BONÉ</a></li>
+            <li><a href="calca.html">CALÇA</a></li>
+            <li><a href="camisetas.html">CAMISETAS</a></li>
+            <li><a href="tenis.html">TÊNIS</a></li>
+            <li><a href="conjuntos.html">CONJUNTOS</a></li>
+          </ul>
+        </li>
+
+        <li><a href="informacoes.html">INFORMAÇÕES</a></li>
       </ul>
-    </li>
-
-    <li><a href="informacoes.html">INFORMAÇÕES</a></li>
-  </ul>
-</nav>
-
+    </nav>
 
     <!-- Ícones (Home e Carrinho) -->
     <div class="actions">
@@ -62,23 +63,8 @@
   <!-- Conteúdo principal -->
   <main class="main-content">
     <div class="products-grid-container"> 
-      <div class="products">
-        <div class="product-card">
-          <img src="/imagem/tenis/Tênis Nike Cuort.jpeg" alt="Boné Pum">
-        </div>
-
-        <div class="product-card">
-          <img src="/imagem/tenis/Tênis Nike Court Borough Low V.jpeg" alt="Boné Tommy">
-        </div>
-
-        <div class="product-card">
-          <img src="imagem/tenis/Tênis Nike Air Max TN Plus.jpeg" alt="Boné Gucci">
-        </div>
-
-        <div class="product-card">
-          <img src="/imagem/tenis/Tênis Nike Court Borough Low.jpeg" alt="Boné Nike">
-        </div>
-      </div>
+      <!-- 🔽 Os produtos serão carregados dinamicamente aqui -->
+      <div id="content"></div>
     </div>
   </main>
 
@@ -97,5 +83,8 @@
       <p>Rua Richard Pereira Dias, 134 • CEP 18112-843 • Votorantim - SP</p>
     </div>
   </footer>
+
+  <!-- Script no final do body -->
+  <script src="js/tenis.js"></script>
 </body>
 </html>
