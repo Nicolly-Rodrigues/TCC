@@ -37,6 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
           <h3 class="product-name">${produto.nome}</h3>
          
         `;
+          const imagem = card.querySelector(".product-image");
+          imagem.addEventListener("click", () => {
+            window.location.href = `pagproduto.html?id=${produto.id}`;
+    });
 
         container.appendChild(card);
       });
