@@ -1,0 +1,25 @@
+/* ---------- Seção principal (produtos) ---------- */
+.main_content {
+  flex:1;
+  padding: 70px 0;
+  display:flex;
+  justify-content:center;
+}
+
+.catalog_header{
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.catalog_filters{
+  display: flex;
+  gap: 12px;
+}
+
+.products {
+  grid-template-columns: repeat(2, 1fr);
+  gap:48px; /* linha vertical e horizontal */
+  max-width: 920px;
+}

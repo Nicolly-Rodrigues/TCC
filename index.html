@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gold Store</title>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="src/styles/global.css">
+        <link rel="stylesheet" href="src/styles/layout.css">
+        <link rel="stylesheet" href="src/styles/componentes.css">
+
+        <link rel="stylesheet" href="src/styles/page_style/index.css">
+        
+        <!-- Font Awesome (opcional - mantém ícones de cartão no rodapé) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <script src="js/inicio.js" ></script>
+    </head>
+
+    <body>
+        <!-- Cabeçalho -->
+        <header class="header">
+        <div class="brand">
+            <a href="index.html">
+                <img src="src/assets/goldstore_logo.png" alt="Gold Store" class="logo_top_left">
+            </a>
+        </div>
+
+        <nav aria-label="Principal">
+            <ul class="nav_links">
+            <li><a href="src/pages/sobrenos.html">SOBRE NÓS</a></li>
+            <li class="dropdown">
+                <a href="src/pages/produtos.html">PRODUTOS</a>
+                <ul class="dropdown_menu">
+                <li><a href="src/pages/bone.html">BONÉ</a></li>
+                <li><a href="src/pages/calca.html">CALÇA</a></li>
+                <li><a href="src/pages/camisetas.html">CAMISETAS</a></li>
+                <li><a href="src/pages/tenis.html">TÊNIS</a></li>
+                <li><a href="src/pages/conjuntos.html">CONJUNTOS</a></li>
+                </ul>
+            </li>
+            <li><a href="src/pages/informacoes.html">INFORMAÇÕES</a></li>
+            </ul>
+        </nav>
+
+        <div class="actions">
+            <a href="index.html" class="icon-btn" aria-label="Início">
+                <!-- ícone -->
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3l9 8h-3v10H6V11H3z"/></svg>
+            </a>
+            <a href="src/pages/carrinho.html" class="icon_btn" aria-label="Carrinho">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4h-2l-1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h10v-2H11.42c-.14 0-.25-.11-.25-.25l.03-.12L12.1 16h5.45c.75 0 1.41-.41 1.75-1.03L23 9H6.42"></path></svg>
+            </a>
+        </div>
+        </header>
+
+        <!-- Seção de produtos -->
+        <main class="main_content">
+            <div class="products_grid_container">
+                <div class="products">
+                        <div class="product_card">
+                            <img src="src/assets/bone/bone_nike_vermelho.jpeg" alt="Boné Nike">
+                        </div>
+                        <div class="product_card">
+                            <img src="src/assets/tenis/Tênis_Nike_Cuort.jpeg" alt="Tênis">
+                        </div>
+                        <div class="product_card">
+                            <img src="src/assets/conjuntos/conjunto_nike_calor.jpeg" alt="Moletom BOSS">
+                        </div>
+                        <div class="product_card">
+                            <img src="src/assets/camisetas/camiseta_polo_lacoste.jpeg" alt="Calça Jeans">
+                        </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Rodapé -->
+        <footer class="footer">
+            <div class="footer_info">
+                <p>SITE DESENVOLVIDO POR <strong>TECHCORE</strong></p>
+                <p>Formas de pagamento:</p>
+                <div class="payments">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+                <a href="https://www.instagram.com/goldstore_gf/">@goldstore.ofc</a>
+                <p>© 2025 Gold Store. Todos os direitos reservados. Gabriel Francisco Pinto Cavalcante - CNPJ: 47.585.634/0001-17 - </p>
+                <p>Rua Silvio Matiolli, 28 - Bairro Rio Acima - Votorantim - SP</p>
+            </div>
+        </footer>
+        
+    </body>
+</html>

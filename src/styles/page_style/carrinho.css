@@ -1,0 +1,44 @@
+/*Cart*/
+
+.cart{
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 36px;
+  padding: 60px 0;
+}
+
+.cart_list{
+  display: grid;
+  gap: 16px;
+}
+
+.cart_item{
+  display: grid;
+  grid-template-columns: 96px 1fr auto;
+  gap: 16px;
+  padding: 12px;
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+}
+
+.cart_item .qty{
+  display: flex;
+  gap: 8px;
+}
+
+.cart_summary{
+  position: sticky;
+  top: 24px;
+  display: grid;
+  gap: 12px;
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.coupon{
+  display: flex;
+  gap: 8px;
+}
