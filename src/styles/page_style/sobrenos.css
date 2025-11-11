@@ -1,0 +1,30 @@
+.about{
+  flex: 1;
+  display: grid;
+  gap: 48px;
+  padding: 60px 0;
+}
+
+.about_hero{
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mvv{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.timeline{
+  position: relative;
+  display: grid;
+  gap: 24px;
+}
+
+.team{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}

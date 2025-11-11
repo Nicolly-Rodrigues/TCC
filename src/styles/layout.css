@@ -1,0 +1,166 @@
+@import url(global.css);
+
+/*Fundo padrão (pode ser customizada por página via classe no <body>*/
+body{
+    background: linear-gradient(to bottom, #000000 0%, #2a2a2a 100%);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*Header*/
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.brand{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.logo_top_left{ 
+    height: clamp(64px, 12vw, 120px);
+    width: auto;
+}
+
+/*Nav*/
+.nav_links{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav_links a{
+    font-weight: 600;
+    opacity: 0.95;
+    transition: color0.16s ease opacity 0.16s ease;
+}
+
+.nav_links a:hover{
+    color: var(--gold);
+    opacity: 1;
+}
+
+/*Dropdown básico*/
+.nav_links li{
+    position: relative;
+}
+
+.dropdown_menu{
+    position:absolute;
+    left:0;
+    top:calc(100% + 8px);
+    z-index:2000;
+    display:none;
+    min-width:200px;
+    background:#e9e9e9;
+    border:2px solid var(--gold);
+    border-radius:8px;
+    box-shadow: 0 18px 40px rgba(0,0,0,.5);
+    overflow: hidden;
+}
+
+.dropdown:hover .dropdown_menu{
+    display:block
+}
+
+.dropdown_menu li{
+    border-bottom:1px solid rgba(0, 0, 0, 0.08);
+}
+
+.dropdown_menu li:last-child{
+    border-bottom: none;
+}
+
+.dropdown_menu a{
+    display:block;
+    padding:12px 14px;
+    color:#000;
+    text-align:center;
+    font-weight:600
+}
+
+.dropdown_menu a:hover{
+    background: #f5f5f5;
+    color: #000;
+}
+
+
+
+/* AÇÕES (ícones) */
+.actions{
+    display:flex;
+    gap:12px;
+    align-items:center
+}
+
+.icon_btn{
+  width:58px;
+  height:50px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#000;
+  color:#fff;
+  border-radius:10px;
+  box-shadow:0 6px 10px rgba(0,0,0,.25);
+  transition:transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.icon_btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(0,0,0,0.45);
+}
+
+.icon_btn:active{
+    transform: translateY(0);
+}
+
+.icon_btn svg{
+    width:24px;
+    height:24px
+}
+
+/* FOOTER */
+.footer{
+  margin-top:auto;
+  background:transparent;
+  text-align:center;
+  padding:28px 18px;
+  border-top:1px solid rgba(255,255,255,0.06);
+  color:#cfcfcf;
+}
+
+.footer_info p{
+    margin:6px 0;
+    font-size:0.95rem
+}
+
+.payments{
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.payments i{
+    color:var(--gold);
+    font-size:1.4rem
+}
+
+/*Responsividade*/
+
+@media (max-width: 960px){
+  .header{padding:18px 24px}
+  .nav-links{gap:1.2rem}
+}
+@media (max-width: 680px){
+  .nav-links{display:none} /* substitua por menu móvel quando tiver JS */
+}
