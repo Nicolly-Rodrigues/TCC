@@ -21,6 +21,10 @@ html, body{
     min-height: 100%;
 }
 
+/*html{
+    background: linear-gradient(to bottom, #000000 0%, #2a2a2a 100%);
+}*/
+
 body, input{
     font-family: "Poppins",system-ui,-apple-system,Segoe UI,Arial,sans-serif;
     color: var(--text-100);

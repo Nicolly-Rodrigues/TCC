@@ -1,41 +1,67 @@
-.auth_wrapper{
-    min-height: calc(100vh - 180px);
-    display: grid;
-    place-items: center;
-    padding: 40px 16px;
+.auth_wrapper {
+  min-height: calc(100vh - 180px);
+  display: grid;
+  place-items: center;
+  padding: 40px 16px;
 }
 
-.auth_card{
+.auth_card {
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid var(--gold);
+  border-radius: 16px;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.35);
+  display: grid;
+  gap: 16px;
+  box-shadow: var(--shadow-1);
+}
+
+.auth_card h1 {
+  font-size: 1.4rem;
+}
+
+.auth_subtitle {
+  font-size: 0.95rem;
+  color: var(--text-300);
+}
+
+.auth_field {
+  display: grid;
+  gap: 6px;
+}
+
+.auth_field label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.auth_field .input {
+  width: 100%;
+  height: 44px;
+}
+
+/* Ações (botões) */
+.auth_actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.auth_actions .btn {
+  flex: 1;
+  justify-content: center;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .auth_actions {
+    flex-direction: column;
+  }
+
+  .auth_actions .btn {
     width: 100%;
-    max-width: 420px;
-    border: 1px solid var(--gold);
-    border-radius: 16px;
-    padding:24px; 
-    background:rgba(0,0,0,.35); 
-    display:grid; 
-    gap:16px;
-}
-
-.auth_field{
-    position: relative;
-    display: grid;
-    gap: 6px;
-}
-
-.auth_field input{
-    width: 100%;
-    height: 44px;
-}
-
-.password_toggle{
-    position: absolute;
-    right: 12px;
-    top: 34px;
-    cursor: pointer;
-}
-
-.auth_actions{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  }
 }

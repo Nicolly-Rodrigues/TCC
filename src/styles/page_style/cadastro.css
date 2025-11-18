@@ -1,32 +1,54 @@
-/*Register*/
+/* Register */
 
-.register_wrapper{
-    min-height: calc(100vh - 180px);
-    display: grid;
-    place-items: center;
-    padding: 40px 16px;
+.register_wrapper {
+  min-height: calc(100vh - 180px);
+  display: grid;
+  place-items: center;
+  padding: 40px 16px;
 }
 
-.register_card{
-    width: 100%;
-    max-width: 720px;
-    border: 1px solid var(--gold);
-    border-radius: 16px;
-    padding: 24px;
-    background: rgba(0, 0, 0, 0.35);
+.register_card {
+  width: 100%;
+  max-width: 720px;
+  border: 1px solid var(--gold);
+  border-radius: 16px;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: var(--shadow-1);
+  display: grid;
+  gap: 16px;
 }
 
-.register_grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+.register_card h1 {
+  font-size: 1.4rem;
 }
 
-.register_grid .full{
-    grid-column: 1 / -1;
+.register_subtitle {
+  font-size: 0.95rem;
+  color: var(--text-300);
 }
 
-.validation_hint{
-    font-size: 0.9rem;
-    color: var(--text-300);
+.register_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.register_grid .full {
+  grid-column: 1 / -1;
+}
+
+.validation_hint {
+  font-size: 0.9rem;
+  color: var(--text-300);
+}
+
+/* aproveita .form, .form_field, .input do componentes.css */
+
+/* Responsivo */
+@media (max-width: 680px) {
+  .register_grid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -22,68 +22,164 @@
 <body>
 
   <!-- ===== HEADER ===== -->
- <header class="header">
-    <div class="brand">
+    <header class="header">
+      <div class="brand">
         <a href="../../index.html">
           <img src="../assets/goldstore_logo.png" alt="Gold Store" class="logo_top_left">
         </a>
         <div class="gold_underline"></div>
-    </div>
-
-    <nav>
-      <ul class="nav_links">
-        <li><a href="../pages/sobrenos.html">SOBRE NÓS</a></li>
-        <li><a href="../pages/produtos.html">PRODUTOS</a></li>
-        <li><a href="../pages/informacoes.html">INFORMAÇÕES</a></li>
-      </ul>
-    </nav>
-
-    <!-- área de ícones (casinha e carrinho) -->
-    <div class="actions">
-      <!-- Botão Home (casinha) - SVG inline -->
-      <a href="../../index.html" class="icon_btn" aria-label="Início">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M3 11.5L12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V11.5z" fill="currentColor"/>
-        </svg>
-      </a>
-
-      <!-- Botão Carrinho - SVG inline -->
-      <a href="../pages/carrinho.html" class="icon_btn" aria-label="Carrinho">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M7 4h-2l-1 2v1h2l3.6 7.59-1.35 2.45A1 1 0 0 0 10 18h8v-2H11.42c-.14 0-.25-.07-.31-.18l.03-.05L12.1 15h5.45a1 1 0 0 0 .95-.68l1.7-6.44A1 1 0 0 0 19.3 6H6.21" fill="currentColor"/>
-          <circle cx="10.5" cy="20.5" r="1.5" fill="currentColor"/>
-          <circle cx="17.5" cy="20.5" r="1.5" fill="currentColor"/>
-        </svg>
-      </a>
-    </div>
-  </header>
-
-  <!-- ===== MAIN ===== -->
-  <main class="d-flex flex-column justify-content-center align-items-center text-white text-center main-content">
-    <div class="info_box ">
-      <p>-Endereço: Rua Silvio Matiolli, 28 - Rio Acima, Votorantim SP</p>
-      <p>-Horário de funcionamento: Segunda a sábado, das 10h às 19h</p>
-      <p>-Telefone/WhatsApp: (15) 99768-4057</p>
-      <p>-Instagram: @goldstore_gf</p>
-    </div>
-  </main>
-
-  <!-- Rodapé -->
-  <footer class="footer">
-    <div class="footer_info">
-      <p>SITE DESENVOLVIDO POR <strong>TECHCORE</strong></p>
-
-      <p>Formas de pagamento:</p>
-      <div class="payments">
-        <i class="fab fa-cc-visa"></i>
-        <i class="fab fa-cc-mastercard"></i>
-        <i class="fab fa-cc-paypal"></i>
       </div>
 
-      <p>@goldstore_ofc</p>
-      <p>© 2025 Gold Store. Todos os direitos reservados.</p>
-      <p>Rua Richard Pereira Dias, 134 • CEP 18112-843 • Votorantim - SP</p>
-    </div>
-  </footer>
+      <nav>
+        <ul class="nav_links">
+          <li><a href="../pages/sobrenos.html">SOBRE NÓS</a></li>
+          <li class="dropdown">
+            <a href="../pages/produtos.html">PRODUTOS</a>
+            <ul class="dropdown_menu">
+              <li><a href="../pages/bone.html">BONÉ</a></li>
+              <li><a href="../pages/calca.html">CALÇA</a></li>
+              <li><a href="../pages/camisetas.html">CAMISETAS</a></li>
+              <li><a href="../pages/tenis.html">TÊNIS</a></li>
+              <li><a href="../pages/conjuntos.html">CONJUNTOS</a></li>
+            </ul>
+          </li>
+          <li><a href="../pages/informacoes.html">INFORMAÇÕES</a></li>
+        </ul>
+      </nav>
+
+      <!-- Ícones (Home e Carrinho) -->
+      <div class="actions">
+        <a href="../../index.html" class="icon_btn" aria-label="Início">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3 11.5L12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V11.5z" fill="currentColor"/>
+            </svg>
+        </a>
+
+        <a href="../pages/carrinho.html" class="icon_btn" aria-label="Carrinho">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M7 4h-2l-1 2v1h2l3.6 7.59-1.35 2.45A1 1 0 0 0 10 18h8v-2H11.42c-.14 0-.25-.07-.31-.18l.03-.05L12.1 15h5.45a1 1 0 0 0 .95-.68l1.7-6.44A1 1 0 0 0 19.3 6H6.21" fill="currentColor"/>
+            <circle cx="10.5" cy="20.5" r="1.5" fill="currentColor"/>
+            <circle cx="17.5" cy="20.5" r="1.5" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
+    </header>
+
+  <!-- ===== MAIN ===== -->
+<main class="info_page">
+      <!-- Bloco título / descrição -->
+      <section class="info_hero">
+        <span class="badge badge--gold">Informações</span>
+        <h1>Como falar com a Gold Store</h1>
+        <p>
+          Confira abaixo nosso endereço, horário de atendimento e canais oficiais
+          para tirar dúvidas, fazer pedidos e acompanhar as novidades da loja.
+        </p>
+      </section>
+
+      <!-- Grid de informações -->
+      <section class="info_grid">
+        <article class="info_card">
+          <div class="info_icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="info_content">
+            <h2>Endereço</h2>
+            <p>
+              Rua Silvio Matiolli, 28<br />
+              Bairro Rio Acima – Votorantim/SP
+            </p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Rua+Silvio+Matiolli,+28,+Votorantim,+SP"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="info_link"
+            >
+              Ver rota no mapa
+            </a>
+          </div>
+        </article>
+
+        <article class="info_card">
+          <div class="info_icon">
+            <i class="fa-solid fa-clock"></i>
+          </div>
+          <div class="info_content">
+            <h2>Horário de funcionamento</h2>
+            <p>
+              Segunda a sábado<br />
+              das 10h às 19h
+            </p>
+          </div>
+        </article>
+
+        <article class="info_card">
+          <div class="info_icon">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <div class="info_content">
+            <h2>Telefone / WhatsApp</h2>
+            <p>(15) 99768-4057</p>
+            <a
+              href="https://wa.me/5515997684057"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="info_link"
+            >
+              Iniciar conversa no WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <article class="info_card">
+          <div class="info_icon">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <div class="info_content">
+            <h2>Instagram</h2>
+            <p>Fique por dentro dos lançamentos e novidades:</p>
+            <a
+              href="https://www.instagram.com/goldstore_gf/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="info_link"
+            >
+              @goldstore_gf
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <!-- Destaque final -->
+      <section class="info_cta">
+        <p>
+          Tem alguma dúvida sobre produtos, tamanhos ou formas de pagamento?
+        </p>
+        <a
+          href="https://wa.me/5515997684057"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn_primary"
+        >
+          Falar com a loja agora
+        </a>
+      </section>
+    </main>
+
+  <!-- Rodapé -->
+    <footer class="footer">
+      <div class="footer_info">
+        <p>SITE DESENVOLVIDO POR <strong>TECHCORE</strong></p>
+        <p>Formas de pagamento:</p>
+        <div class="payments">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-paypal"></i>
+        </div>
+        <p>@goldstore_ofc</p>
+        <p>© 2025 Gold Store. Todos os direitos reservados.</p>
+        <p>Rua Richard Pereira Dias, 134 • CEP 18112-843 • Votorantim - SP</p>
+      </div>
+    </footer>
 </body>
 </html>

@@ -1,25 +1,112 @@
-/* ---------- Seção principal (produtos) ---------- */
-.main_content {
-  flex:1;
-  padding: 70px 0;
-  display:flex;
-  justify-content:center;
+/* Página de catálogo */
+
+.catalog_page {
+  flex: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 16px 40px;
+  display: grid;
+  gap: 32px;
 }
 
-.catalog_header{
+/* Cabeçalho / título */
+
+.catalog_header {
   display: flex;
-  gap: 24px;
-  align-items: center;
-  margin-bottom: 32px;
+  justify-content: center;
+  text-align: center;
 }
 
-.catalog_filters{
-  display: flex;
+.catalog_text {
+  max-width: 640px;
+  display: grid;
   gap: 12px;
 }
 
-.products {
-  grid-template-columns: repeat(2, 1fr);
-  gap:48px; /* linha vertical e horizontal */
-  max-width: 920px;
+.catalog_text h1 {
+  font-size: clamp(1.8rem, 2.6vw, 2.3rem);
+  font-weight: 700;
+}
+
+.catalog_text p {
+  font-size: 0.98rem;
+  color: var(--text-300);
+}
+
+/* Grid de cards de categoria */
+
+.products_grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.product_card {
+  border-radius: 14px;
+  border: 1px solid var(--gold);
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.product_link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.product_img_wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.product_img_wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product_body {
+  padding: 14px 16px 16px;
+  display: grid;
+  gap: 6px;
+}
+
+.product_body h2 {
+  font-size: 1.05rem;
+}
+
+.product_body p {
+  font-size: 0.9rem;
+  color: var(--text-300);
+}
+
+.product_cta {
+  margin-top: 4px;
+  font-size: 0.86rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+}
+
+/* Hover */
+
+.product_card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+  border-color: #f5d774;
+}
+
+/* Responsivo */
+
+@media (max-width: 880px) {
+  .products_grid {
+    grid-template-columns: 1fr;
+  }
 }

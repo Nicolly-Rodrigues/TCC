@@ -1,110 +1,198 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gold Store</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gold Store - Produtos</title>
 
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-        <link rel="stylesheet" href="../styles/global.css">
-        <link rel="stylesheet" href="../styles/layout.css">
-        <link rel="stylesheet" href="../styles/componentes.css">
-        
-        <link rel="stylesheet" href="../styles/page_style/produtos.css">
-        
-        <!-- Font Awesome (opcional - mantém ícones de cartão no rodapé) -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <script src="js/inicio.js" ></script>
-    </head>
-    
-<body>
-  <!-- Cabeçalho -->
-  <header class="header">
-    <div class="brand">
-      <a href="inicio.html">
-      <img src="imagem/goldstore logo.png" alt="Gold Store" class="logo-top-left">
-      </a>
-      <div class="gold-underline"></div>
-    </div>
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/componentes.css" />
 
-<nav>
-  <ul class="nav-links">
-    <li><a href="sobrenos.html">SOBRE NÓS</a></li>
+    <link rel="stylesheet" href="../styles/page_style/produtos.css" />
 
-    <li class="dropdown">
-      <a href="produtos.html">PRODUTOS</a>
-      <ul class="dropdown-menu">
-        <li><a href="bone.html">BONÉ</a></li>
-        <li><a href="calca.html">CALÇA</a></li>
-        <li><a href="camisetas.html">CAMISETAS</a></li>
-        <li><a href="tenis.html">TÊNIS</a></li>
-        <li><a href="conjuntos.html">CONJUNTOS</a></li>
-      </ul>
-    </li>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="js/inicio.js"></script>
+  </head>
 
-    <li><a href="informacoes.html">INFORMAÇÕES</a></li>
-  </ul>
-</nav>
-
-
-    <!-- Ícones (Home e Carrinho) -->
-    <div class="actions">
-      <a href="inicio.html" class="icon-btn" aria-label="Início">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M3 11.5L12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V11.5z" fill="currentColor"/>
-        </svg>
-      </a>
-
-      <a href="carrinho.html" class="icon-btn" aria-label="Carrinho">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M7 4h-2l-1 2v1h2l3.6 7.59-1.35 2.45A1 1 0 0 0 10 18h8v-2H11.42c-.14 0-.25-.07-.31-.18l.03-.05L12.1 15h5.45a1 1 0 0 0 .95-.68l1.7-6.44A1 1 0 0 0 19.3 6H6.21" fill="currentColor"/>
-          <circle cx="10.5" cy="20.5" r="1.5" fill="currentColor"/>
-          <circle cx="17.5" cy="20.5" r="1.5" fill="currentColor"/>
-        </svg>
-      </a>
-    </div>
-  </header>
-
-  <!-- Conteúdo principal -->
-  <main class="main-content">
-    <div class="products-grid-container"> 
-      <div class="products">
-        <div class="product-card">
-          <img src="/imagem/bone/bone puma.jpeg" alt="Boné Pum">
-        </div>
-
-        <div class="product-card">
-          <img src="/imagem/calca/calca escrita.jpeg" alt="Boné Tommy">
-        </div>
-
-        <div class="product-card">
-          <img src="imagem/camisetas/camiseta off.jpeg" alt="Boné Gucci">
-        </div>
-
-        <div class="product-card">
-          <img src="/imagem/tenis/Tênis Nike Cuort.jpeg" alt="Boné Nike">
-        </div>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+      <div class="brand">
+        <a href="../../index.html">
+          <img
+            src="../assets/goldstore_logo.png"
+            alt="Gold Store"
+            class="logo_top_left"
+          />
+        </a>
+        <div class="gold_underline"></div>
       </div>
-    </div>
-  </main>
 
-  <!-- Rodapé -->
-  <footer class="footer">
-    <div class="footer-info">
-      <p>SITE DESENVOLVIDO POR <strong>TECHCORE</strong></p>
-      <p>Formas de pagamento:</p>
-      <div class="payments">
-        <i class="fab fa-cc-visa"></i>
-        <i class="fab fa-cc-mastercard"></i>
-        <i class="fab fa-cc-paypal"></i>
+      <nav>
+        <ul class="nav_links">
+          <li><a href="../pages/sobrenos.html">SOBRE NÓS</a></li>
+
+          <li class="dropdown">
+            <a href="../pages/produtos.html">PRODUTOS</a>
+            <ul class="dropdown_menu">
+              <li><a href="../pages/bone.html">BONÉ</a></li>
+              <li><a href="../pages/calca.html">CALÇA</a></li>
+              <li><a href="../pages/camisetas.html">CAMISETAS</a></li>
+              <li><a href="../pages/tenis.html">TÊNIS</a></li>
+              <li><a href="../pages/conjuntos.html">CONJUNTOS</a></li>
+            </ul>
+          </li>
+
+          <li><a href="../pages/informacoes.html">INFORMAÇÕES</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <a href="../../index.html" class="icon_btn" aria-label="Início">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M3 11.5L12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V11.5z"
+              fill="currentColor"
+            />
+          </svg>
+        </a>
+
+        <a href="../pages/carrinho.html" class="icon_btn" aria-label="Carrinho">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M7 4h-2l-1 2v1h2l3.6 7.59-1.35 2.45A1 1 0 0 0 10 18h8v-2H11.42c-.14 0-.25-.07-.31-.18l.03-.05L12.1 15h5.45a1 1 0 0 0 .95-.68l1.7-6.44A1 1 0 0 0 19.3 6H6.21"
+              fill="currentColor"
+            />
+            <circle cx="10.5" cy="20.5" r="1.5" fill="currentColor" />
+            <circle cx="17.5" cy="20.5" r="1.5" fill="currentColor" />
+          </svg>
+        </a>
       </div>
-      <p>@goldstore_ofc</p>
-      <p>© 2025 Gold Store. Todos os direitos reservados.</p>
-      <p>Rua Richard Pereira Dias, 134 • CEP 18112-843 • Votorantim - SP</p>
-    </div>
-  </footer>
-</body>
+    </header>
+
+    <!-- ===== MAIN ===== -->
+    <main class="catalog_page">
+      <section class="catalog_header">
+        <div class="catalog_text">
+          <span class="badge badge--gold">Coleções</span>
+          <h1>Escolha sua categoria</h1>
+          <p>
+            Bonés, calças, camisetas, tênis e conjuntos selecionados para quem
+            vive o estilo Gold Store no dia a dia.
+          </p>
+        </div>
+      </section>
+
+      <section class="products_grid">
+        <!-- Bonés -->
+        <article class="product_card">
+          <a href="../pages/bone.html" class="product_link">
+            <div class="product_img_wrapper">
+              <img
+                src="/imagem/bone/bone puma.jpeg"
+                alt="Bonés Gold Store"
+              />
+            </div>
+            <div class="product_body">
+              <h2>Bonés</h2>
+              <p>Modelos de aba reta e curva, pra completar o fit com atitude.</p>
+              <span class="product_cta">Ver bonés</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Calças -->
+        <article class="product_card">
+          <a href="../pages/calca.html" class="product_link">
+            <div class="product_img_wrapper">
+              <img
+                src="/imagem/calca/calca escrita.jpeg"
+                alt="Calças Gold Store"
+              />
+            </div>
+            <div class="product_body">
+              <h2>Calças</h2>
+              <p>Modelagens confortáveis e estilosas pra rua ou dia a dia.</p>
+              <span class="product_cta">Ver calças</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Camisetas -->
+        <article class="product_card">
+          <a href="../pages/camisetas.html" class="product_link">
+            <div class="product_img_wrapper">
+              <img
+                src="imagem/camisetas/camiseta off.jpeg"
+                alt="Camisetas Gold Store"
+              />
+            </div>
+            <div class="product_body">
+              <h2>Camisetas</h2>
+              <p>Estampas e cores que representam sua personalidade.</p>
+              <span class="product_cta">Ver camisetas</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Tênis -->
+        <article class="product_card">
+          <a href="../pages/tenis.html" class="product_link">
+            <div class="product_img_wrapper">
+              <img
+                src="/imagem/tenis/Tênis Nike Cuort.jpeg"
+                alt="Tênis Gold Store"
+              />
+            </div>
+            <div class="product_body">
+              <h2>Tênis</h2>
+              <p>Os pares que fecham o look com conforto e presença.</p>
+              <span class="product_cta">Ver tênis</span>
+            </div>
+          </a>
+        </article>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="footer_info">
+        <p>SITE DESENVOLVIDO POR <strong>TECHCORE</strong></p>
+        <p>Formas de pagamento:</p>
+        <div class="payments">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-paypal"></i>
+        </div>
+        <p>@goldstore_ofc</p>
+        <p>© 2025 Gold Store. Todos os direitos reservados.</p>
+        <p>Rua Richard Pereira Dias, 134 • CEP 18112-843 • Votorantim - SP</p>
+      </div>
+    </footer>
+  </body>
 </html>
