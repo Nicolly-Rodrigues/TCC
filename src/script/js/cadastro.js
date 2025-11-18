@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (resposta.ok) {
                   // Redireciona para a página inicial
-        window.location.assign("/inicio.html");
+        window.location.assign("../../index.html");
         alert("Usuário cadastrado com sucesso!");
         form.reset();
 

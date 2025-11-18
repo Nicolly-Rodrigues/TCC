@@ -1,5 +1,5 @@
  document.addEventListener("DOMContentLoaded", () => {
-  const formLogin = document.getElementById("formLogin");
+  const formLogin = document.getElementById("form");
 
   formLogin.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -28,7 +28,7 @@
         // Aqui você pode salvar o token no localStorage se quiser persistir a sessão
         localStorage.setItem("token", resultado.token);
         // Redirecionar para página privada
-        window.location.href = "/inicio.html";
+        window.location.href = "/src/index.html";
       } else {
         alert(resultado.erro);
       }
