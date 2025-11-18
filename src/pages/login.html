@@ -1,57 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gold Store</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gold Store - Login</title>
 
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-        <link rel="stylesheet" href="../styles/global.css">
-        <link rel="stylesheet" href="../styles/layout.css">
-        <link rel="stylesheet" href="../styles/componentes.css">
-        
-        <link rel="stylesheet" href="../styles/page_style/login.css">
-        
-        <script src="js/inicio.js" ></script>
-    </head>
-<body>
-    <header>
-        <div class="brand">
-      <a href="../../index.html">
-      <img src="../assets/goldstore_logo.png" alt="Gold Store" class="logo_top_left">
-      </a>
-      <div class="gold_underline"></div>
-    </div>
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/componentes.css" />
+
+    <link rel="stylesheet" href="../styles/page_style/login.css" />
+
+    <script src="js/inicio.js"></script>
+  </head>
+
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+      <div class="brand">
+        <a href="../../index.html">
+          <img
+            src="../assets/goldstore_logo.png"
+            alt="Gold Store"
+            class="logo_top_left"
+          />
+        </a>
+        <div class="gold_underline"></div>
+      </div>
+
+      <nav>
+        <ul class="nav_links">
+          <li><a href="../pages/sobrenos.html">SOBRE NÓS</a></li>
+
+          <li class="dropdown">
+            <a href="../pages/produtos.html">PRODUTOS</a>
+            <ul class="dropdown_menu">
+              <li><a href="../pages/bone.html">BONÉ</a></li>
+              <li><a href="../pages/calca.html">CALÇA</a></li>
+              <li><a href="../pages/camisetas.html">CAMISETAS</a></li>
+              <li><a href="../pages/tenis.html">TÊNIS</a></li>
+              <li><a href="../pages/conjuntos.html">CONJUNTOS</a></li>
+            </ul>
+          </li>
+
+          <li><a href="../pages/informacoes.html">INFORMAÇÕES</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <a href="../../index.html" class="icon_btn" aria-label="Início">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M3 11.5L12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V11.5z"
+              fill="currentColor"
+            />
+          </svg>
+        </a>
+      </div>
     </header>
 
-    <main>
-        <div class="login_box">
-            <form id="form">
-                <label for="email" class="form_field">E-MAIL:</label>
-                <input type="email" id="email" name="email" required>
+    <!-- ===== MAIN ===== -->
+    <main class="auth_wrapper">
+      <section class="auth_card">
+        <h1>Entrar</h1>
+        <p class="auth_subtitle">
+          Acesse sua conta para acompanhar pedidos e ofertas da Gold Store.
+        </p>
 
-                <label for="senha" class="form_field">SENHA:</label>
-                <input type="password" id="senha" name="senha" required>
+        <form id="form" class="form">
+          <div class="auth_field">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="input"
+              required
+            />
+          </div>
 
-                <div class="btn">
-                    <button type="button" onclick="window.location.href='cadastro.html'">FAÇA SEU CADASTRO</button>
-                    <button type="submit">ENTRAR</button>
-                </div>
-            </form>
-        </div>
+          <div class="auth_field">
+            <label for="senha">Senha</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              class="input"
+              required
+            />
+          </div>
+
+          <div class="auth_actions">
+            <button
+              type="button"
+              class="btn btn_ghost"
+              onclick="window.location.href='cadastro.html'"
+            >
+              Fazer cadastro
+            </button>
+
+            <button type="submit" class="btn btn_primary">
+              Entrar
+            </button>
+          </div>
+        </form>
+      </section>
     </main>
 
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
-        <div class="footer_info">
-            <p>SITE DESENVOLVIDO POR <strong>TECHCORE</strong></p>
-            <p>@goldstore.ofc</p>
-            <p>© 2025 Gold Store. Todos os direitos reservados. Gabriel Francisco Pinto Cavalcante - CNPJ: 47.585.634/0001-17 - </p>
-            <p>Rua Silvio Matiolli, 28 - Bairro Rio Acima - Votorantim - SP</p>
+      <div class="footer_info">
+        <p>SITE DESENVOLVIDO POR <strong>TECHCORE</strong></p>
+        <p>Formas de pagamento:</p>
+        <div class="payments">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-paypal"></i>
         </div>
+        <p>@goldstore_ofc</p>
+        <p>© 2025 Gold Store. Todos os direitos reservados.</p>
+        <p>Rua Richard Pereira Dias, 134 • CEP 18112-843 • Votorantim - SP</p>
+      </div>
     </footer>
+
     <script src="js/login.js"></script>
-</body>
+  </body>
 </html>

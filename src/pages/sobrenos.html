@@ -23,33 +23,40 @@
 
     <!-- ===== HEADER ===== -->
   <!-- ===== HEADER ===== -->
-  <header class="header">
+    <header class="header">
       <div class="brand">
-        <a href="inicio.html">
-        <img src="imagem/goldstore logo.png" alt="Gold Store" class="logo-top-left">
+        <a href="../../index.html">
+          <img src="../assets/goldstore_logo.png" alt="Gold Store" class="logo_top_left">
         </a>
-        <div class="gold-underline"></div>
+        <div class="gold_underline"></div>
       </div>
 
       <nav>
-        <ul class="nav-links">
-          <li><a href="sobrenos.html">SOBRE NÓS</a></li>
-          <li><a href="produtos.html">PRODUTOS</a></li>
-          <li><a href="informacoes.html">INFORMAÇÕES</a></li>
+        <ul class="nav_links">
+          <li><a href="../pages/sobrenos.html">SOBRE NÓS</a></li>
+          <li class="dropdown">
+            <a href="../pages/produtos.html">PRODUTOS</a>
+            <ul class="dropdown_menu">
+              <li><a href="../pages/bone.html">BONÉ</a></li>
+              <li><a href="../pages/calca.html">CALÇA</a></li>
+              <li><a href="../pages/camisetas.html">CAMISETAS</a></li>
+              <li><a href="../pages/tenis.html">TÊNIS</a></li>
+              <li><a href="../pages/conjuntos.html">CONJUNTOS</a></li>
+            </ul>
+          </li>
+          <li><a href="../pages/informacoes.html">INFORMAÇÕES</a></li>
         </ul>
       </nav>
 
-      <!-- área de ícones (casinha e carrinho) -->
+      <!-- Ícones (Home e Carrinho) -->
       <div class="actions">
-        <!-- Botão Home (casinha) - SVG inline -->
-        <a href="inicio.html" class="icon-btn" aria-label="Início">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M3 11.5L12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V11.5z" fill="currentColor"/>
-          </svg>
+        <a href="../../index.html" class="icon_btn" aria-label="Início">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3 11.5L12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V11.5z" fill="currentColor"/>
+            </svg>
         </a>
 
-        <!-- Botão Carrinho - SVG inline -->
-        <a href="carrinho.html" class="icon-btn" aria-label="Carrinho">
+        <a href="../pages/carrinho.html" class="icon_btn" aria-label="Carrinho">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M7 4h-2l-1 2v1h2l3.6 7.59-1.35 2.45A1 1 0 0 0 10 18h8v-2H11.42c-.14 0-.25-.07-.31-.18l.03-.05L12.1 15h5.45a1 1 0 0 0 .95-.68l1.7-6.44A1 1 0 0 0 19.3 6H6.21" fill="currentColor"/>
             <circle cx="10.5" cy="20.5" r="1.5" fill="currentColor"/>
@@ -61,57 +68,78 @@
 
 
     <!-- ===== MAIN ===== -->
-    <main class="d-flex flex-column justify-content-center align-items-center text-white text-center main-content">
-      <div class="info-box p-4">
-      <!-- ===== HISTÓRIA ===== -->
-  <section class="sobre py-5 text-white text-center">
-    <div class="container">
-      <h2 class="gold-text mb-4">Nossa História</h2>
-      <p class="sobre-text">
-        Muito prazer, me chamo Gabriel, tenho 21 anos e sou o fundador da Gold Store.
-        Minha trajetória começou de forma simples — já fui monitor de buffet infantil,
-        montador de caixas e empacotador em mercado. Mas sempre carreguei no coração o
-        desejo de empreender.
-      </p>
-      <p class="sobre-text">
-        Em 2022, decidi dar o primeiro passo rumo ao meu sonho. Comecei vendendo online,
-        apenas pelo Instagram, com o estoque guardado na sala da minha casa. Mesmo com
-        poucos recursos, nunca faltaram gratidão, dedicação e a certeza de que o meu negócio cresceria.
-      </p>
-      <p class="sobre-text">
-        Com muito esforço e fé, em agosto de 2025 consegui realizar um grande sonho: abrir
-        a loja física da Gold Store, exatamente do jeito que sempre imaginei. Desde então,
-        estamos no mercado não apenas como uma loja, mas como uma marca que entrega experiências
-        e transmite a nossa essência a cada cliente.
-      </p>
-      <p class="sobre-text">
-        A Gold Store é mais que moda: é um estilo de vida. Acreditamos no poder da autenticidade,
-        na força da rua e na confiança de vestir quem você realmente é. Cada peça é pensada para
-        quem valoriza conforto, atitude e identidade — porque aqui, moda tem propósito.
-      </p>
-    </div>
-  </section>
+<main class="about_page">
+      <!-- Hero -->
+      <section class="about_hero">
+        <span class="badge badge--gold">Sobre a Gold Store</span>
+        <h1>Nossa história</h1>
+        <p>
+          Conheça a trajetória da Gold Store, da venda online na sala de casa
+          até a loja física que virou referência de estilo e autenticidade em
+          Votorantim.
+        </p>
+      </section>
 
-      </div>
+      <!-- Card com a história -->
+      <section class="about_story">
+        <p>
+          Muito prazer, me chamo Gabriel, tenho 21 anos e sou o fundador da Gold
+          Store. Minha trajetória começou de forma simples — já fui monitor de
+          buffet infantil, montador de caixas e empacotador em mercado. Mas
+          sempre carreguei no coração o desejo de empreender.
+        </p>
+
+        <p>
+          Em 2022, decidi dar o primeiro passo rumo ao meu sonho. Comecei
+          vendendo online, apenas pelo Instagram, com o estoque guardado na sala
+          da minha casa. Mesmo com poucos recursos, nunca faltaram gratidão,
+          dedicação e a certeza de que o meu negócio cresceria.
+        </p>
+
+        <p>
+          Com muito esforço e fé, em agosto de 2025 consegui realizar um grande
+          sonho: abrir a loja física da Gold Store, exatamente do jeito que
+          sempre imaginei. Desde então, estamos no mercado não apenas como uma
+          loja, mas como uma marca que entrega experiências e transmite a nossa
+          essência a cada cliente.
+        </p>
+
+        <p>
+          A Gold Store é mais que moda: é um estilo de vida. Acreditamos no
+          poder da autenticidade, na força da rua e na confiança de vestir quem
+          você realmente é. Cada peça é pensada para quem valoriza conforto,
+          atitude e identidade — porque aqui, moda tem propósito.
+        </p>
+      </section>
+
+      <!-- Bloco final / propósito -->
+      <section class="about_cta">
+        <div class="about_cta_text">
+          <h2>Nosso propósito</h2>
+          <p>
+            Construir uma marca que represente a rua, a vivência e a
+            personalidade de quem veste Gold Store — sempre com qualidade,
+            conforto e atendimento próximo.
+          </p>
+        </div>
+      </section>
     </main>
 
     <!-- Rodapé -->
-    <footer class="footer">
-      <div class="footer-info">
-        <p>SITE DESENVOLVIDO POR <strong>TECHCORE</strong></p>
-
-        <p>Formas de pagamento:</p>
-        <div class="payments">
-          <i class="fab fa-cc-visa"></i>
-          <i class="fab fa-cc-mastercard"></i>
-          <i class="fab fa-cc-paypal"></i>
-        </div>
-
-        <p>@goldstore_ofc</p>
-        <p>© 2025 Gold Store. Todos os direitos reservados.</p>
-        <p>Rua Richard Pereira Dias, 134 • CEP 18112-843 • Votorantim - SP</p>
-      </div>
-    </footer>
+        <footer class="footer">
+            <div class="footer_info">
+                <p>SITE DESENVOLVIDO POR <strong>TECHCORE</strong></p>
+                <p>Formas de pagamento:</p>
+                <div class="payments">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+                <a href="https://www.instagram.com/goldstore_gf/">@goldstore.ofc</a>
+                <p>© 2025 Gold Store. Todos os direitos reservados. Gabriel Francisco Pinto Cavalcante - CNPJ: 47.585.634/0001-17 - </p>
+                <p>Rua Silvio Matiolli, 28 - Bairro Rio Acima - Votorantim - SP</p>
+            </div>
+        </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.js"></script>
   </body>
