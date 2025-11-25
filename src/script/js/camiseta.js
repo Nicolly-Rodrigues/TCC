@@ -1,46 +1,49 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const container = document.getElementById('content');
+  const container = document.querySelector('.products'); // pega o grid correto
 
-  // Garante que o container exista
   if (!container) {
-    console.error("❌ Erro: elemento #content não encontrado no HTML.");
+    console.error("❌ Erro: elemento .products não encontrado no HTML.");
     return;
   }
 
-  // Busca os produtos na API
   fetch('http://127.0.0.1:8000/api/produtos/')
     .then(response => {
       if (!response.ok) throw new Error('Erro ao buscar produtos da API.');
       return response.json();
     })
     .then(data => {
-      container.innerHTML = ''; // limpa o conteúdo anterior
+      container.innerHTML = '';
 
-      // Filtra produtos da categoria "camisseta" (ou variações de capitalização)
-      const camiseta = data.filter(item => 
-        item.categoria && item.categoria.nome && 
+      const camisetas = data.filter(item =>
+        item.categoria &&
+        item.categoria.nome &&
         item.categoria.nome.toLowerCase().includes('camiseta')
       );
 
-      if (camiseta.length === 0) {
-        container.innerHTML = '<p>Nenhuma Camiseta encontrada.</p>';
+      if (camisetas.length === 0) {
+        container.innerHTML = '<p>Nenhuma camiseta encontrada.</p>';
         return;
       }
 
-      // Cria cards de produtos dinamicamente
-      camiseta.forEach(produto => {
+      camisetas.forEach(produto => {
         const card = document.createElement('div');
-        card.className = 'product-card';
+        card.className = 'product_card';
 
         card.innerHTML = `
-          <img src="${produto.imagem}" alt="${produto.nome}" class="product-image" />
-          <h3 class="product-name">${produto.nome}</h3>
-         
-        `;
-          const imagem = card.querySelector(".product-image");
-          imagem.addEventListener("click", () => {
-            window.location.href = `pagproduto.html?id=${produto.id}`;
-    });
+         <div class="product_img_box">
+      <img src="${produto.imagem}" alt="${produto.nome}">
+    </div>
+
+    <div class="product_info">
+      <h3>${produto.nome}</h3>
+      <p>${produto.descricao || "Descrição breve do produto."}</p>
+
+      <a href="../pages/pagproduto.html?id=${produto.id}" class="product_link">
+        VER ${produto.nome.toUpperCase()}
+      </a>
+    </div>
+  `;
+        
 
         container.appendChild(card);
       });
