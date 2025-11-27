@@ -28,7 +28,7 @@
         // Aqui você pode salvar o token no localStorage se quiser persistir a sessão
         localStorage.setItem("token", resultado.token);
         // Redirecionar para página privada
-        window.location.href = "/src/index.html";
+        window.location.href = "../../index.html";
       } else {
         alert(resultado.erro);
       }

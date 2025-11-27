@@ -157,27 +157,49 @@
   font-size: 0.95rem;
 }
 
-/* Quantidade */
-
+/* Quantidade – ESTILO NOVO */
 .qty {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
-.qty button,
-.qty input {
+/* Botões + e - */
+.qty button {
+  width: 40px;
   height: 40px;
+  border-radius: 10px;
+  border: 1px solid #3b3b3b;
+  background: #0f0f0f;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
 }
 
-.qty input {
-  width: 52px;
-  text-align: center;
-  border-radius: 6px;
-  border: 1px solid #2c2c2c;
-  background: rgba(20, 20, 20, 0.45);
-  color: var(--text-100);
+.qty button:hover {
+  border-color: var(--gold);
+  background: #1a1a1a;
 }
+
+/* Input da quantidade */
+.qty input {
+  width: 55px;
+  height: 40px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #3b3b3b;
+  background: #151515;
+  color: var(--text-100);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+
 
 .buy_note {
   font-size: 0.88rem;
@@ -210,3 +232,11 @@
     grid-template-columns: 1fr;
   }
 }
+/* Remove setas no Chrome, Edge e Safari */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+

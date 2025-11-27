@@ -53,3 +53,36 @@ class ProdutoVariacao(models.Model):
 
     def __str__(self):
         return f"{self.produto.nome} - Tamanho {self.tamanho} (Estoque: {self.estoque})"
+class Pedido(models.Model):
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, null=True, blank=True)
+    endereco_entrega = models.ForeignKey(Endereco, on_delete=models.SET_NULL, null=True, blank=True)
+
+    data = models.DateTimeField(auto_now_add=True)
+    total = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+
+    status = models.CharField(
+        max_length=20,
+        default="aguardando_pagamento",
+        choices=[
+            ("aguardando_pagamento", "Aguardando Pagamento"),
+            ("pago", "Pago"),
+            ("enviado", "Enviado"),
+            ("concluido", "Concluído"),
+            ("cancelado", "Cancelado"),
+        ]
+    )
+
+    def __str__(self):
+        return f"Pedido #{self.id} - {self.usuario}"
+class ItemPedido(models.Model):
+    pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE, related_name="itens")
+
+    variacao = models.ForeignKey(ProdutoVariacao, on_delete=models.PROTECT)
+    quantidade = models.PositiveIntegerField()
+    preco_unitario = models.DecimalField(max_digits=10, decimal_places=2)
+
+    def subtotal(self):
+        return self.quantidade * self.preco_unitario
+
+    def __str__(self):
+        return f"{self.quantidade}x {self.variacao.produto.nome} ({self.variacao.tamanho})"

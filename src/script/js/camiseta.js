@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     <div class="product_info">
       <h3>${produto.nome}</h3>
-      <p>${produto.descricao || "Descrição breve do produto."}</p>
+     
 
       <a href="../pages/pagproduto.html?id=${produto.id}" class="product_link">
         VER ${produto.nome.toUpperCase()}

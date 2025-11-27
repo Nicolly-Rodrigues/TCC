@@ -1,0 +1,26 @@
+[
+  {
+    "id": 3,
+    "nome": "Boné Nike Vermelho",
+    "img": "src/assets/bone/bone_nike_vermelho.jpeg",
+    "categoria": "bone"
+  },
+  {
+    "id": 14,
+    "nome": "Tênis Nike Court",
+    "img": "src/assets/tenis/Tênis_Nike_Cuort.jpeg",
+    "categoria": "tenis"
+  },
+  {
+    "id": 19,
+    "nome": "Conjunto Nike Calor",
+    "img": "src/assets/conjuntos/conjunto_nike_calor.jpeg",
+    "categoria": "conjuntos"
+  },
+  {
+    "id": 12,
+    "nome": "Camiseta Polo Lacoste",
+    "img": "src/assets/camisetas/camiseta_polo_lacoste.jpeg",
+    "categoria": "camisetas"
+  }
+]

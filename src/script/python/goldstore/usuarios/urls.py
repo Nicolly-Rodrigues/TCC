@@ -3,13 +3,14 @@ from .views import (
     CategoriaList, CategoriaDetail,
     ProdutoList, ProdutoDetail,
     ProdutoVariacaoList, ProdutoVariacaoDetail,
-    CadastroUsuarioAPIView , LoginAPIView # <-- adicione aqui também
+    CadastroUsuarioAPIView, LoginAPIView,
+    finalizar_pedido   # <-- AQUI!
 )
 
 urlpatterns = [
-    # Cadastro de usuário
+    # Cadastro e login
     path('cadastro/', CadastroUsuarioAPIView.as_view(), name='cadastro-usuario'),
-     path('login/', LoginAPIView.as_view(), name='login-usuario'),
+    path('login/', LoginAPIView.as_view(), name='login-usuario'),
 
     # Categorias
     path('categorias/', CategoriaList.as_view(), name='categoria-list'),
@@ -19,7 +20,10 @@ urlpatterns = [
     path('produtos/', ProdutoList.as_view(), name='produto-list'),
     path('produtos/<int:pk>/', ProdutoDetail.as_view(), name='produto-detail'),
 
-    # Variações (Tamanhos + Estoque)
+    # Variações
     path('variacoes/', ProdutoVariacaoList.as_view(), name='variacao-list'),
     path('variacoes/<int:pk>/', ProdutoVariacaoDetail.as_view(), name='variacao-detail'),
+
+    # Finalizar pedido
+    path('finalizar-pedido/', finalizar_pedido, name='finalizar-pedido'),
 ]

@@ -68,3 +68,28 @@ class ProdutoSerializer(serializers.ModelSerializer):
             'categoria_id',
             'variacoes',
         ]
+from .models import Pedido, ItemPedido, ProdutoVariacao
+
+# Item dentro do pedido
+class ItemPedidoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ItemPedido
+        fields = ['variacao', 'quantidade', 'preco_unitario']
+
+
+# Serializer usado ao FINALIZAR o pedido (requisição do frontend)
+class FinalizarPedidoItemSerializer(serializers.Serializer):
+    variacao_id = serializers.IntegerField()
+    quantidade = serializers.IntegerField()
+
+
+class FinalizarPedidoSerializer(serializers.Serializer):
+    usuario_id = serializers.IntegerField(required=False)
+    endereco_id = serializers.IntegerField(required=False)
+    itens = FinalizarPedidoItemSerializer(many=True)
+class PedidoSerializer(serializers.ModelSerializer):
+    itens = ItemPedidoSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Pedido
+        fields = ['id', 'usuario', 'endereco_entrega', 'total', 'data_criacao', 'itens']
