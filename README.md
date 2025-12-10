@@ -2,9 +2,7 @@
 Bem-vindo ao repositório da Gold Store, um e-commerce moderno e responsivo criado como parte de um Trabalho de Conclusão de Curso (TCC).
 O projeto busca entregar uma experiência elegante, fluida e com forte identidade visual, utilizando tons de preto e dourado para transmitir exclusividade.
 📸 Demonstração
-(Adicione aqui o link do GitHub Pages quando publicar)
-Exemplo:
-https://seuusuario.github.io/gold-store/
+(https://github.com/Nicolly-Rodrigues/TCC)
 
 📁 Estrutura do Projeto
 TCC/
